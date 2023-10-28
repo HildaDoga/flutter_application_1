@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            TextButton(onPressed: _incrementCounter, child: Text("Ekle"))
+            TextButton(onPressed: _incrementCounter, child: Text("Sayı Ekle"))
           ],
         ),
       ),

@@ -1,0 +1,23 @@
+name: person_list_app
+description: A simple Flutter app for managing a list of people
+version: 1.0.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.3
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+flutter:
+assets:
+  - lib/images/image6.jpg

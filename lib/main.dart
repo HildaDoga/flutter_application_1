@@ -158,7 +158,7 @@ class NewPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => NewPage(people: people)));
                   },
-                  child: Image(image: AssetImage('lib/images/image3.jpg')),
+                  child: Image(image: AssetImage('lib/images/image6.jpg')),
                 ),
                 ListTile(
                   title: Text("Features"),

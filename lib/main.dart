@@ -127,24 +127,86 @@ class _MyHomePageState extends State<MyHomePage> {
 class NewPage extends StatelessWidget {
   final List<Person> people;
 
-  NewPage({required this.people});
+  const NewPage({required this.people});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Main Page'),
-      ),
-      body: Column(
-        children: [
-          Text('Welcome!'),
-          GestureDetector(
-            child: Image.asset('lib/images/image6.jpg'),
-            onTap: () {
-              Navigator.pop(context);
-            },
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter'),
+          centerTitle: true,
+          backgroundColor: Colors.deepPurple,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(10),
+              bottomRight: Radius.circular(10),
+            ),
           ),
-        ],
+        ),
+        body: SingleChildScrollView(
+          child: Card(
+            color: Colors.white,
+            margin: EdgeInsets.all(2),
+            elevation: 3,
+            child: Column(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NewPage(people: people)));
+                  },
+                  child: Image(image: AssetImage('lib/images/image3.jpg')),
+                ),
+                ListTile(
+                  title: Text("Features"),
+                ),
+                ListTile(
+                  title: Text("Feature1"),
+                  subtitle: Text("Feature_1"),
+                ),
+                ListTile(
+                  title: Text("Feature2"),
+                  subtitle: Text("Feature_2"),
+                ),
+                ListTile(
+                  title: Text("Feature3"),
+                  subtitle: Text("Feature_3"),
+                ),
+                ListTile(
+                  title: Text("Feature4"),
+                  subtitle: Text("Feature_4"),
+                ),
+                ListTile(
+                  title: Text("Feature5"),
+                  subtitle: Text("Feature_5"),
+                ),
+                ListTile(
+                  title: Text("Feature6"),
+                  subtitle: Text("Feature_6"),
+                ),
+                ListTile(
+                  title: Text("Feature7"),
+                  subtitle: Text("Feature_7"),
+                ),
+                ListTile(
+                  title: Text("Feature8"),
+                  subtitle: Text("Feature_8"),
+                ),
+                ListTile(
+                  title: Text("Feature9"),
+                  subtitle: Text("Feature_9"),
+                ),
+                ListTile(
+                  title: Text("Feature10"),
+                  subtitle: Text("Feature_10"),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

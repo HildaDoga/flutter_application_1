@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           ElevatedButton(
             onPressed: _navigateToNewPage,
-            child: Text('Turn Back'),
+            child: Text('Navigate to New Page'),
           ),
           Expanded(
             child: ListView.builder(
@@ -131,80 +131,73 @@ class NewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter'),
-          centerTitle: true,
-          backgroundColor: Colors.deepPurple,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(10),
-              bottomRight: Radius.circular(10),
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('New Page'),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
           ),
         ),
-        body: SingleChildScrollView(
-          child: Card(
-            color: Colors.white,
-            margin: EdgeInsets.all(2),
-            elevation: 3,
-            child: Column(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => NewPage(people: people)));
-                  },
-                  child: Image(image: AssetImage('lib/images/image6.jpg')),
-                ),
-                ListTile(
-                  title: Text("Features"),
-                ),
-                ListTile(
-                  title: Text("Feature1"),
-                  subtitle: Text("Feature_1"),
-                ),
-                ListTile(
-                  title: Text("Feature2"),
-                  subtitle: Text("Feature_2"),
-                ),
-                ListTile(
-                  title: Text("Feature3"),
-                  subtitle: Text("Feature_3"),
-                ),
-                ListTile(
-                  title: Text("Feature4"),
-                  subtitle: Text("Feature_4"),
-                ),
-                ListTile(
-                  title: Text("Feature5"),
-                  subtitle: Text("Feature_5"),
-                ),
-                ListTile(
-                  title: Text("Feature6"),
-                  subtitle: Text("Feature_6"),
-                ),
-                ListTile(
-                  title: Text("Feature7"),
-                  subtitle: Text("Feature_7"),
-                ),
-                ListTile(
-                  title: Text("Feature8"),
-                  subtitle: Text("Feature_8"),
-                ),
-                ListTile(
-                  title: Text("Feature9"),
-                  subtitle: Text("Feature_9"),
-                ),
-                ListTile(
-                  title: Text("Feature10"),
-                  subtitle: Text("Feature_10"),
-                ),
-              ],
-            ),
+      ),
+      body: SingleChildScrollView(
+        child: Card(
+          color: Colors.white,
+          margin: EdgeInsets.all(2),
+          elevation: 3,
+          child: Column(
+            children: [
+              GestureDetector(
+                onTap: () {},
+                child: Image(image: AssetImage('lib/images/image6.jpg')),
+              ),
+              ListTile(
+                title: Text("Features"),
+              ),
+              ListTile(
+                title: Text("Feature 1"),
+                subtitle: Text("Description for Feature 1"),
+              ),
+              ListTile(
+                title: Text("Feature 2"),
+                subtitle: Text("Description for Feature 2"),
+              ),
+              ListTile(
+                title: Text("Feature 3"),
+                subtitle: Text("Description for Feature 3"),
+              ),
+              ListTile(
+                title: Text("Feature 4"),
+                subtitle: Text("Description for Feature 4"),
+              ),
+              ListTile(
+                title: Text("Feature 5"),
+                subtitle: Text("Description for Feature 5"),
+              ),
+              ListTile(
+                title: Text("Feature 6"),
+                subtitle: Text("Description for Feature 6"),
+              ),
+              ListTile(
+                title: Text("Feature 7"),
+                subtitle: Text("Description for Feature 7"),
+              ),
+              ListTile(
+                title: Text("Feature 8"),
+                subtitle: Text("Description for Feature 8"),
+              ),
+              ListTile(
+                title: Text("Feature 9"),
+                subtitle: Text("Description for Feature 9"),
+              ),
+              ListTile(
+                title: Text("Feature 10"),
+                subtitle: Text("Description for Feature 10"),
+              ),
+            ],
           ),
         ),
       ),

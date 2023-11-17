@@ -13,7 +13,7 @@ void printUserName(int id) {
   // Future nesnesi döndüren bir fonksiyon çağırıyoruz
   var future = getUserName(id);
   // Future nesnesinin sonucunu then yöntemiyle alıyoruz
-  future.then((name) { ( bu satıra var name = await getUserName(id); ded yazılabilir)
+  future.then((name) { ( bu satıra var name = await getUserName(id); de yazılabilir)
     // Future nesnesi tamamlandığında kullanıcı adını yazdırıyoruz
     print(name);
   });

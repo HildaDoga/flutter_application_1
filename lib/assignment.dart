@@ -13,12 +13,12 @@ void printUserName(int id) {
   // Future nesnesi döndüren bir fonksiyon çağırıyoruz
   var future = getUserName(id);
   // Future nesnesinin sonucunu then yöntemiyle alıyoruz
-  future.then((name) {
+  future.then((name) { ( bu satıra var name = await getUserName(id); ded yazılabilir)
     // Future nesnesi tamamlandığında kullanıcı adını yazdırıyoruz
     print(name);
   });
 }
-Await ifadesi ise, Future nesnesinin sonucunu bekler ve asenkron fonksiyonun akışını durdurur. Future'ın soluna await ifadesini koyarsak eğer gerisi sanki then içindeymiş gibi çalışır. 
+Await ifadesi ise, Future nesnesinin sonucunu bekler ve asenkron fonksiyonun akışını durdurur. Await ifadesi kullanıldığında, Future nesnesinin sonucunu almak için then yöntemini kullanmış gibi oluruz.
 
 }
 3- Await ifadesi, Future nesnesinin sonucunu beklemek ve asenkron fonksiyonun akışını durdurmak için kullanılır. Await, Future nesnesinin tamamlanmasını bekler ve sonucunu döndürür ayrıca sadece asenkron fonksiyonların içinde kullanılabilir. 
@@ -96,7 +96,7 @@ car
   ..changeColor("Mavi")
   ..printCar();
 
-7- Dart dilinde liste içerisine, başka bir listenin elemanları direkt olarak eklenmek istendiğinde, addAll yöntemini kullanabiliriz.
+7- Dart dilinde liste içerisine, başka bir listenin elemanları direkt olarak eklenmek istendiğinde addAll/insertAll ya da ... operatörünü kullanabiliriz.
 // İki liste oluşturuyoruz
 var list1 = [1, 2, 3];
 var list2 = [4, 5, 6];
@@ -107,6 +107,12 @@ list1.addAll(list2);
 // list1'i yazdırıyoruz
 print(list1); // [1, 2, 3, 4, 5, 6]
 
+**********
+List<int> liste1 = [1, 2, 3]; 
+List<int> liste2 = [4, 5, 6]; 
+List<int> liste3 = [...liste1, ...liste2]; // Yeni bir liste oluşturup liste1 ve liste2'nin elemanlarını ekliyoruz
+print(liste3); 
+// Bu kodun çıktısı: [1, 2, 3, 4, 5, 6]
 
 
 */

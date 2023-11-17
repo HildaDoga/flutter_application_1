@@ -18,7 +18,7 @@ void printUserName(int id) {
     print(name);
   });
 }
-Await ifadesi ise, Future nesnesinin sonucunu bekler ve asenkron fonksiyonun akışını durdurur. Await ifadesi kullanıldığında, Future nesnesinin sonucunu almak için then yöntemini kullanmış gibi oluruz.
+Await ifadesi ise, future nesnesinin tamamlanmasını bekler ve değerini döndürür. Bu sayede, asenkron bir fonksiyonun diğer işlemleri engellemesini önler ve kodun daha okunaklı olmasını sağlar.
 
 }
 3- Await ifadesi, Future nesnesinin sonucunu beklemek ve asenkron fonksiyonun akışını durdurmak için kullanılır. Await, Future nesnesinin tamamlanmasını bekler ve sonucunu döndürür ayrıca sadece asenkron fonksiyonların içinde kullanılabilir. 
